@@ -1,0 +1,66 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    <div class="container-fluid">
+        <div id="first-page" class="row">
+            <h1 class="main-title">Etang Jolysable</h1>
+
+            <div class="col-md-offset-2 col-sm-5 col-md-5">
+                <div class="thumb thumbnail">
+                    <li>
+                        <figure>
+                            <img src=""
+                                 width="500" height="100%"
+                                 class="lazy" title="section gîte">
+                            <figcaption class="text-center">
+                                <h3>
+                                    <span>Nos chambres</span>
+                                </h3>
+                            </figcaption>
+                            <div class="caption">
+                                <a href="#">
+                                    <h3>Partie gîte</h3>
+                                </a>
+                            </div>
+                        </figure>
+                    </li>
+                </div>
+            </div>
+            <div class="col-sm-5 col-md-5">
+                <div class="thumb thumbnail">
+                    <li>
+                        <figure>
+                            <img src=""
+                                 width="500" height="100%"
+                                 class="lazy" title="section pêche">
+                            <figcaption class="text-center">
+                                <h3>
+                                    <span>Notre étang</span>
+                                </h3>
+                            </figcaption>
+                            <div class="caption">
+                                <a href="#">
+                                    <h3>Partie pêche</h3>
+                                </a>
+                            </div>
+                        </figure>
+                    </li>
+                </div>
+            </div>
+        </div>
+
+        <!-- Partie gîte -->
+        <div id="room-location" class="row">
+
+        </div>
+
+        <!-- Partie pêche -->
+        <div id="fishing" class="row">
+            <div class="filter">
+                <img src="{{ asset("assets/images/Logo-desktop.png") }}" class="logo-center">
+
+                {% include "AppBundle::informations.html.twig" %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

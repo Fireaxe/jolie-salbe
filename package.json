@@ -1,0 +1,20 @@
+{
+  "name": "jolysable",
+  "version": "0.0.2",
+  "dependencies": {
+    "bower": "^1.7.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Fireaxe/jolysable.git"
+  },
+  "author": "alexandre vaast",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Fireaxe/jolysable/issues"
+  },
+  "homepage": "https://github.com/Fireaxe/jolysable"
+}

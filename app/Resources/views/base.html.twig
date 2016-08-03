@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>{% block title %}Jolysable{% endblock %}</title>
+
+    {% stylesheets filter="scssphp" output="css/app.css"
+    "assets/sass/*.scss" %}
+    <link rel="stylesheet" href="{{ asset_url }}"/>
+    {% endstylesheets %}
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+</head>
+<body>
+{% block body %}{% endblock %}
+
+{% javascripts filter="?jsqueeze" output="js/app.js"
+"assets/vendor/jquery/dist/jquery.min.js"
+"assets/vendor/bootstrap/dist/js/bootstrap.min.js"
+
+"assets/js/main.js" %}
+<script src="{{ asset_url }}"></script>
+{% endjavascripts %}
+</body>
+</html>
