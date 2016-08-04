@@ -42,7 +42,12 @@ button.home {
 
 .logo-center {
   display: block;
-  margin: 5% auto 7% auto;
+  margin: 40% auto 3% auto;
+  background-color: rgba(0, 0, 0, .5);
+
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
 }
 
 #room-location {
@@ -188,6 +193,16 @@ button.home {
   -webkit-transform: scale(1.4);
   -moz-transform: scale(1.4);
   transform: scale(1.4);
+}
+
+.center-wrapper {
+  margin-top: 10%;
+
+  .text-bordered {
+    position: relative;
+    border: 1px solid #fff;
+    padding: 15px;
+  }
 }
 
 @media (max-width: 1200px) {

@@ -13,7 +13,7 @@ class DefaultController extends Controller
      */
     public function indexAction(Request $request)
     {
-        return $this->render('AppBundle::index.html.twig', [
+        return $this->render('AppBundle:Front:index.html.twig', [
 
         ]);
     }
