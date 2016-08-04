@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>{% block title %}Jolysable{% endblock %}</title>
+
+    {% stylesheets filter="scssphp" output="css/bo.css"
+    "assets/sass/bo.scss" %}
+    <link rel="stylesheet" href="{{ asset_url }}"/>
+    {% endstylesheets %}
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+    <link rel="icon" type="image/png" href="{{ asset('assets/images/Logo-mobile.png') }}">
+</head>
+<body>
+<aside class="nav-sidebar">
+    <div class="sidebar">
+        <h1>
+            <a href="{{ path('admin') }}">Back-office</a>
+        </h1>
+
+        <ul>
+            <li class="substart">
+                <a href="{{ path("admin.booking") }}">
+                    Gestion des réservations
+                </a>
+            </li>
+            <hr>
+            <li class="substart">
+                <a href="{{ path("homepage") }}">
+                    Revenir au site
+                </a>
+            </li>
+        </ul>
+    </div>
+</aside>
+
+<div class="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="main-wrapper col-md-10">
+            {% block body %}{% endblock %}
+        </div>
+    </div>
+</div>
+
+{% javascripts filter="?jsqueeze" output="js/app.js"
+"assets/vendor/jquery/dist/jquery.min.js"
+"assets/vendor/jquery-ui/jquery-ui.min.js"
+"assets/vendor/bootstrap/dist/js/bootstrap.min.js"
+
+"assets/js/main.js" %}
+<script src="{{ asset_url }}"></script>
+{% endjavascripts %}
+</body>
+</html>
