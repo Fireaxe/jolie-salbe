@@ -17,3 +17,5 @@
 /web/assets/css/*.css
 /web/assets/vendor/*
 /node_modules
+.idea
+
