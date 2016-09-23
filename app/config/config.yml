@@ -31,6 +31,7 @@ framework:
     fragments:       ~
     http_method_override: true
     assets: ~
+    translator:      { fallback: %locale% }
 
 # Twig Configuration
 twig:
@@ -74,3 +75,8 @@ assetic:
         scssphp:
             formatter: 'Leafo\ScssPhp\Formatter\Compressed'
         jsqueeze: ~
+
+fos_user:
+    db_driver: orm
+    firewall_name: main
+    user_class: UserBundle\Entity\User
