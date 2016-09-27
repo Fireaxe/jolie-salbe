@@ -14,5 +14,16 @@ user:
     requirements:
         _locale: be|nl|fr|en
 
+root:
+    path: /
+    defaults:
+        _controller: "FrameworkBundle:Redirect:urlRedirect"
+        path: /fr/index
+        permanent: true
+
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+    prefix:   /{_locale}
+    defaults:  { _locale: fr }
+    requirements:
+        _locale: be|nl|fr|en

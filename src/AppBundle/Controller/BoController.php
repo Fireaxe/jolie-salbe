@@ -9,7 +9,7 @@ use Symfony\Component\HttpFoundation\Request;
 class BoController extends Controller
 {
     /**
-     * @Route("/bo", name="admin")
+     * @Route("/bo", name="admin.index")
      */
     public function indexAction(Request $request)
     {
