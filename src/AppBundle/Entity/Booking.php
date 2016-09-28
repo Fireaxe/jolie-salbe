@@ -56,14 +56,14 @@ class Booking
      *
      * @ORM\Column(name="is_refuse", type="boolean")
      */
-    private $isRefuse;
+    private $isRefuse = false;
 
     /**
      * @var boolean
      *
      * @ORM\Column(name="is_validate", type="boolean")
      */
-    private $isValidate;
+    private $isValidate = false;
 
     /**
      * @var string

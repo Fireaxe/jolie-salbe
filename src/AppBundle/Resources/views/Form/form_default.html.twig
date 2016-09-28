@@ -1,0 +1,9 @@
+{% form_theme form 'AppBundle:Form:fields.html.twig' %}
+
+{{ form_start(form) }}
+
+{% for child in form.children %}
+    {{ form_row(child) }}
+{% endfor %}
+
+{{ form_end(form) }}

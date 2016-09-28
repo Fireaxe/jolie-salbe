@@ -3,18 +3,18 @@
 {% block body %}
     <h1>Toutes les Réservations</h1>
     <hr>
-    <a class="btn btn-animate btn-blue" href="">Créer une réservation</a>
+    <a class="btn btn-animate btn-blue" href="{{ path('admin.booking.new') }}">Créer une réservation</a>
     <hr>
     <div class="table-responsive">
         <table class="table table-striped table-index">
             <thead>
             <tr>
                 <th>Id</th>
-                <th>Date de création</th>
-                <th>Date de modification</th>
+                <th>Dernière modification</th>
                 <th>Nom</th>
                 <th>Email</th>
                 <th>Nombre de personnes</th>
+                <th>Statut de la demande</th>
                 <th>Actions</th>
             </tr>
             </thead>
@@ -26,30 +26,28 @@
                             {{ a.id }}
                         </td>
                         <td>
-                            {{ a.created | date('d/m/Y') }}
-                        </td>
-                        <td>
                             {{ a.updated | date('d/m/Y') }}
                         </td>
                         <td>
-                            {{ a.title }}
+                            {{ a.customerName }}
                         </td>
                         <td>
-                            {{ a.content }}
+                            {{ a.customerEmail }}
                         </td>
                         <td>
-                            {{ a.updated | date_modify("+1 month") | date('d/m/Y') }}
+                            {{ a.nbCustomer }}
                         </td>
                         <td>
-                            {% if a.isActive %}
-                                Oui
+                            {% if a.isValidate %}
+                                Validée
+                            {% elseif a.isRefuse %}
+                                Refusé
                             {% else %}
-                                Non
+                                En Attente
                             {% endif %}
                         </td>
                         <td>
-                            <a class="btn btn-animate btn-light-blue"
-                               href="{{ path('admin.alerts.form.edit', { id : a.id }) }}">Modifier</a>
+                            <a class="btn btn-animate btn-light-blue">Modifier</a>
                         </td>
                     </tr>
                 {% endfor %}
