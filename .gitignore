@@ -16,6 +16,9 @@
 /web/bundles/
 /web/assets/css/*.css
 /web/assets/vendor/*
+/web/css
+/web/js
 /node_modules
 .idea
+
 
