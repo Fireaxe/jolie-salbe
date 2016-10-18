@@ -5,7 +5,8 @@ $(document).on('ready', function () {
         var page = $('#' + dest);
 
         $('#main-row').hide("slide", {direction: "left"}, 500);
-        $(page).show("slide", {direction: "right"}, 1000);
+        $('#bottom-page').hide("slide", {direction: "left"}, 500);
+        $(page).show("slide", {direction: "right"}, 500);
     });
 
     $(document).on('click', 'button.home', function () {
@@ -13,6 +14,7 @@ $(document).on('ready', function () {
         var page = $('#' + dest);
 
         $(page).hide("slide", {direction: "right"}, 500);
-        $('#main-row').show("slide", {direction: "left"}, 1000);
+        $('#main-row').show("slide", {direction: "left"}, 500);
+        $('#bottom-page').show("slide", {direction: "left"}, 500);
     });
 });

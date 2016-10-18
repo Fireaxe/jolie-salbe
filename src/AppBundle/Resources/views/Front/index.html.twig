@@ -3,17 +3,46 @@
 {% block body %}
     <div class="container-fluid">
         <div class="row">
-            <video loop="loop" muted="muted" autoplay="autoplay" class="fullscreen-bg__video">
-                <source src="{{ asset("assets/images/video-1474548000.mp4") }}" type="video/mp4">
-            </video>
             <div id="main-row">
-                <h1 class="main-title">Etang Jolysable</h1>
+                <h1 class="main-title">Jolysable</h1>
 
-                <div class="col-xs-offset-0 col-sm-offset-4 col-md-offset-2 col-lg-offset-2 col-sm-8 col-md-5">
+                <p align="center" class="jolysable-desc">
+                    Idéalement situé entre Royan, Cognac et Bordeaux, nos chambres vous apporteront le calme d'un coin
+                    de nature au bord d'un étang de pêche. <br/>
+                    Nous disposons de 4 chambres allant de 50 à 100€, toutes avec télé, wifi et plateau de complaisance.
+                </p>
+            </div>
+
+            <!-- Partie gîte -->
+            <div id="room-location">
+                    <button class="home" data-value="room-location">
+                        Retour
+                    </button>
+
+                    <div class="center-wrapper">
+                        {% include "AppBundle:Front:rooms.html.twig" %}
+                    </div>
+            </div>
+
+            <!-- Partie pêche -->
+            <div id="fishing">
+                <div class="filter">
+                    <button class="home" data-value="fishing">
+                        Retour
+                    </button>
+
+                    <div class="center-wrapper">
+                        {% include "AppBundle:Front:informations.html.twig" %}
+                    </div>
+                </div>
+            </div>
+
+            <div id="bottom-page" class="row">
+                <div class="col-md-6">
                     <div class="thumb thumbnail">
                         <li>
                             <figure>
-                                <img src="" height="100%"
+                                <img src="{{ asset("assets/images/Exterieur.jpg") }}"
                                      class="lazy" title="section gîte">
                                 <figcaption class="text-center">
                                     <h3 data-value="room-location">
@@ -22,18 +51,18 @@
                                 </figcaption>
                                 <div class="caption">
                                     <a href="#">
-                                        <h3>Partie gîte</h3>
+                                        <h3 align="center">Chambres</h3>
                                     </a>
                                 </div>
                             </figure>
                         </li>
                     </div>
                 </div>
-                <div class="col-sm-8 col-md-5">
+                <div class="col-md-6">
                     <div class="thumb thumbnail">
                         <li>
                             <figure>
-                                <img src="" height="100%"
+                                <img src="{{ asset("assets/images/Exterieur-etang.jpg") }}"
                                      class="lazy" title="section pêche">
                                 <figcaption class="text-center">
                                     <h3 data-value="fishing">
@@ -42,27 +71,11 @@
                                 </figcaption>
                                 <div class="caption">
                                     <a href="#">
-                                        <h3>Partie pêche</h3>
+                                        <h3 align="center">Pêche</h3>
                                     </a>
                                 </div>
                             </figure>
                         </li>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Partie gîte -->
-            <div id="room-location">
-                <button class="btn btn-primary home" data-value="room-location">Retour à l'accueil</button>
-            </div>
-
-            <!-- Partie pêche -->
-            <div id="fishing">
-                <div class="filter">
-                    <button class="btn btn-primary home" data-value="fishing">Retour à l'accueil</button>
-
-                    <div class="center-wrapper">
-                        {% include "AppBundle:Front:informations.html.twig" %}
                     </div>
                 </div>
             </div>
