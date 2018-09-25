@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cb1adae5-d9db-4a77-9d18-5947a263f112" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/bo.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/bo.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/.htaccess" afterPath="$PROJECT_DIR$/web/.htaccess" />
     </list>
     <ignored path="jolysable.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,11 +33,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".htaccess" pinned="false" current-in-tab="false">
+      <file leaf-file-name=".htaccess" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/.htaccess">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="49" column="41" lean-forward="false" selection-start-line="49" selection-start-column="41" selection-end-line="49" selection-end-column="41" />
+            <state relative-caret-position="105">
+              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -52,16 +52,6 @@
                 <marker date="1518533315000" expanded="true" signature="1213:1224" ph="..." />
                 <marker date="1518533315000" expanded="true" signature="1284:1295" ph="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bo.html.twig" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Resources/views/bo.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="461">
-              <caret line="52" column="51" lean-forward="false" selection-start-line="52" selection-start-column="51" selection-end-line="52" selection-end-column="51" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -177,8 +167,8 @@
         <option value="$PROJECT_DIR$/web/assets/sass/vars.scss" />
         <option value="$PROJECT_DIR$/web/assets/sass/style.scss" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/Front/index.html.twig" />
-        <option value="$PROJECT_DIR$/web/.htaccess" />
         <option value="$PROJECT_DIR$/app/Resources/views/bo.html.twig" />
+        <option value="$PROJECT_DIR$/web/.htaccess" />
       </list>
     </option>
   </component>
@@ -802,12 +792,12 @@
       <workItem from="1536155598712" duration="94000" />
       <workItem from="1537191585989" duration="280000" />
       <workItem from="1537193863652" duration="1550000" />
-      <workItem from="1537199846176" duration="7657000" />
+      <workItem from="1537199846176" duration="7715000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83592000" />
+    <option name="totallyTimeSpent" value="83650000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -1197,10 +1187,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/.htaccess">
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/bo.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="49" column="41" lean-forward="false" selection-start-line="49" selection-start-column="41" selection-end-line="49" selection-end-column="41" />
+        <state relative-caret-position="461">
+          <caret line="52" column="51" lean-forward="false" selection-start-line="52" selection-start-column="51" selection-end-line="52" selection-end-column="51" />
           <folding />
         </state>
       </provider>
@@ -1216,10 +1206,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/bo.html.twig">
+    <entry file="file://$PROJECT_DIR$/web/.htaccess">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="52" column="51" lean-forward="false" selection-start-line="52" selection-start-column="51" selection-end-line="52" selection-end-column="51" />
+        <state relative-caret-position="105">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding />
         </state>
       </provider>
