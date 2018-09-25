@@ -1,5 +1,6 @@
-$primary-color: #42A5F5;
-$secondary-color: #66BB6A;
+$primary-color: #64b5f6;
+$bk-color: #e3f2fd;
+$secondary-color: #2286c3;
 
 @font-face {
   font-family: "Roboto-Light";
@@ -14,4 +15,30 @@ $secondary-color: #66BB6A;
 @font-face {
   font-family: "Roboto-Regular";
   src: url("/assets/fonts/Roboto-Regular.ttf") format("truetype");
+}
+
+/* radius */
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin appearance($type) {
+  -webkit-appearance: $type;
+  -moz-appearance:    $type;
+  appearance:         $type;
+}
+
+/* box-shadow */
+@mixin box-shadow($left, $top, $blur, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $left $top $blur $color;
+    -moz-box-shadow:inset $left $top $blur $color;
+    box-shadow:inset $left $top $blur $color;
+  } @else {
+    -webkit-box-shadow: $left $top $blur $color;
+    -moz-box-shadow: $left $top $blur $color;
+    box-shadow: $left $top $blur $color;
+  }
 }

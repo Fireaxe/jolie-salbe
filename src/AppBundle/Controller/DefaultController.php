@@ -17,4 +17,24 @@ class DefaultController extends Controller
 
         ]);
     }
+
+    /**
+     * @Route("/rooms", name="rooms")
+     */
+    public function roomAction(Request $request)
+    {
+        return $this->render('AppBundle:Front:rooms.html.twig', [
+
+        ]);
+    }
+
+    /**
+     * @Route("/fishing", name="fishing")
+     */
+    public function fishingAction(Request $request)
+    {
+        return $this->render('AppBundle:Front:informations.html.twig', [
+
+        ]);
+    }
 }

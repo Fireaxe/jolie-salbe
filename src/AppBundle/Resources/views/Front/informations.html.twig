@@ -1,57 +1,81 @@
-<img src="{{ asset("assets/images/Logo-desktop.png") }}" class="logo-center">
+{% extends '::base.html.twig' %}
 
-<div class="col-md-offset-1 col-md-4">
-    <h2>Horaires et tarifs</h2>
+{% block body %}
+    <div id="fishing" class="row">
+        <div class="filter">
+            <div class="col-md-12">
+                <img src="{{ asset("assets/images/Logo-desktop.png") }}" class="logo-center">
 
-    <p>
-        Tous les jours de 8h à 19h. <br/>
-        Entrez, installez-vous et nous passerons vous voir.
-    </p>
+                <div class="col-md-offset-4 col-md-4">
+                    <div align="center" class="text-bordered">
+                        Les lâcher des truites reprennent à partir du mois de mars 2019 tous les samedi. 10€ la canne !
+                    </div>
+                </div>
+            </div>
 
-    <label>Poissons :</label>
-    <ul>
-        <li>Carpes, Esturgeons, Brochets et Tanches en no kill</li>
-        <li>Gardons, Gougeons, Anguilles...peuvent être pris</li>
-    </ul>
-    <br/>
+            <div class="col-md-12 informations-block">
+                <div class="row text-center">
+                    <h2>Horaires et tarifs</h2>
+                    <hr>
 
-    <label>Tarifs :</label>
-    <ul>
-        <li>10€ la journée</li>
-        <li>20€ les 24h</li>
-        <li>Gratuit pour les moins de 12 ans</li>
-    </ul>
+                    <p>
+                        Tous les jours de 8h à 19h. <br/>
+                        Entrez, installez-vous et nous passerons vous voir.
+                    </p>
 
-    <i>Une entrée est limité à 2 cannes, puis 2€ par canne supplémentaire.</i>
-    <br/>
-    <br/>
+                    <br>
+                </div>
 
-    <label>Nous contacter au :</label>
-    <ul>
-        <li>06.50.34.13.43</li>
-        <li>06.62.66.87.17</li>
-    </ul>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="info-wrapper">
 
-    <label>Par mail :</label>
-    stein.claire24@gmail.com
-</div>
+                        </div>
+                        <h3 class="text-center width-max">Tarifs</h3>
+                        <ul>
+                            <li>10€ la journée</li>
+                            <li>20€ les 24h</li>
+                        </ul>
+                    </div>
 
-<div class="col-md-2">
-    <div align="center" class="text-bordered">
-        Les lâcher des truites reprennent tous les week end à partir de fin septembre, 9€ la canne !
+                    <div class="col-md-4">
+                        <h3 class="text-center width-max">Poissons</h3>
+                        <ul>
+                            <li>Carpes, Esturgeons et Tanches <b>en no kill</b></li>
+                            <li>Gardons, Gougeons, Anguilles, Brochets... peuvent être pris</li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-4">
+                        <h3 class="text-center width-max">Nous contacter</h3>
+                        <ul>
+                            <li>06.50.34.13.43</li>
+                            <li>06.62.66.87.17</li>
+                            <li>stein.claire24@gmail.com</li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-2">
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12 informations-block background-none">
+                <div class="row text-center">
+                    <h2>Plan d'accès</h2>
+                    <hr>
+
+                    <p>
+                        Lieu dit : Jolysable<br/>
+                        14 rue des fontaines<br/>
+                        17800 Pons<br/>
+                        (Derrière le Leclerc de Pons)
+                    </p>
+
+                    <br/>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
-
-<div class="col-md-offset-1 col-md-4">
-    <h2>Plan d'accès</h2>
-
-    <p>
-        Lieu dit : Jolysable<br/>
-        14 rue des fontaines<br/>
-        17800 Pons<br/>
-        (Derrière le Leclerc de Pons)
-    </p>
-
-    <br/>
-    <div id='gmap_canvas' style='height:350px;width:400px;'></div>
-</div>
+{% endblock %}
