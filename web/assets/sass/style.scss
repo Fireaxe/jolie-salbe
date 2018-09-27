@@ -168,6 +168,38 @@ button.home {
     border-top: 0;
     border-bottom: 1px solid rgba(0, 0, 0, .5);
   }
+
+  .arrow-left {
+    border-top: 45px solid transparent;
+    border-bottom: 45px solid transparent;
+    border-left: 20px solid $dark-color;
+  }
+
+  .arrow-right {
+    border-top: 45px solid transparent;
+    border-bottom: 45px solid transparent;
+    border-right: 20px solid $dark-color;
+  }
+}
+
+@media only screen and (max-device-width: 720px) {
+  .room-thumbnail {
+
+    .arrow-left {
+      border-top: 20px solid $dark-color;
+      border-bottom: 2px solid #000;
+      border-left: 45px solid transparent;
+      border-right: 45px solid transparent;
+    }
+
+    .arrow-right {
+      border-top: none;
+      border-bottom: 20px solid $dark-color;
+      border-left: 45px solid transparent;
+      border-right: 45px solid transparent;
+    }
+  }
+
 }
 
 .thumb.thumbnail .caption {
