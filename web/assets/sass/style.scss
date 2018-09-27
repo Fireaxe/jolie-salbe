@@ -339,6 +339,10 @@ button.home {
 }
 
 @media (min-width: 1600px) {
+  .room-desc {
+    height: 500px;
+  }
+
   .thumb figure {
     height: 500px;
     overflow: hidden;
