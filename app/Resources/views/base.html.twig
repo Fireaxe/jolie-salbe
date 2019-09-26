@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8"/>
-    <title>{% block title %}Jolysable{% endblock %}</title>
+    <title>{% block title %}{{ 'app.title'|trans }}{% endblock %}</title>
 
     {% stylesheets filter="scssphp" output="css/app.css"
     "assets/sass/*.scss" %}
@@ -36,7 +36,49 @@
     </script>
 </head>
 <body>
-<div id="main" class="container-fluid">
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="navbar-toggle close-menu">
+                <span>&times;</span>
+            </div>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <a class="navbar-brand" href="{{ path('homepage') }}">
+                {{ 'app.title'|trans }}
+            </a>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a {% if app.request.get('_route') == 'homepage' %} class="active"{% endif %} href="{{ path('homepage') }}">
+                        {{ 'page.homepage.title'|trans }}
+                    </a>
+                </li>
+                <li>
+                    <a{% if app.request.get('_route') == 'rooms' %} class="active"{% endif %} href="{{ path('rooms') }}">
+                        {{ 'page.rooms.title'|trans }}
+                    </a>
+                </li>
+                <li>
+                    <a {% if app.request.get('_route') == 'fishing' %} class="active"{% endif %} href="{{ path('fishing') }}">
+                        {{ 'page.fishing.title'|trans }}
+                    </a>
+                </li>
+                <li>
+                    <a {% if app.request.get('_route') == 'homepage' %} class="active"{% endif %} href="#">
+                        {{ 'page.contact.title'|trans }}
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div id="main" class="container-fluid nopadding">
     {% block body %}{% endblock %}
 </div>
 

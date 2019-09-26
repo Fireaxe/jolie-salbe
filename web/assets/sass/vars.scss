@@ -1,5 +1,5 @@
-$primary-color: #64b5f6;
-$bk-color: #e3f2fd;
+$primary-color: #fff;
+$bk-color: #E0E6E626;
 $secondary-color: #2286c3;
 $dark-color: #2286c3;
 
@@ -16,6 +16,46 @@ $dark-color: #2286c3;
 @font-face {
   font-family: "Roboto-Regular";
   src: url("/assets/fonts/Roboto-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Allura-Regular";
+  src: url("/assets/fonts/Allura-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Arimo-Regular";
+  src: url("/assets/fonts/Arimo-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Arimo-Bold";
+  src: url("/assets/fonts/Arimo-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Barlow-SemiBold";
+  src: url("/assets/fonts/Barlow-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Barlow-Italic";
+  src: url("/assets/fonts/Barlow-Italic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Barlow-Regular";
+  src: url("/assets/fonts/Barlow-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Segoe UI";
+  src: url("/assets/fonts/Segoe UI.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Segoe UI Italic";
+  src: url("/assets/fonts/Segoe UI Italic.woff") format("woff");
 }
 
 /* radius */
