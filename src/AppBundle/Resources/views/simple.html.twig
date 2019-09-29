@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}Jolysable{% endblock %}</title>
+
+    {% stylesheets filter="scssphp" output="css/bo.css"
+    "assets/sass/bo.scss" %}
+    <link rel="stylesheet" type="text/css" href="{{ asset_url }}"/>
+    {% endstylesheets %}
+
+    {% block stylesheets %}{% endblock %}
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+    <link rel="icon" type="image/png" href="{{ asset('assets/images/Logo-mobile.png') }}">
+</head>
+<body>
+<div id="login-page" class="container-fluid">
+    <div class="row">
+        <div class="col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4 main">
+            {% block body %}{% endblock %}
+        </div>
+    </div>
+</div>
+
+{% javascripts filter="?jsqueeze" output="js/app.js"
+"assets/vendor/jquery/dist/jquery.min.js"
+"assets/vendor/jquery-ui/jquery-ui.min.js"
+"assets/vendor/bootstrap/dist/js/bootstrap.min.js" %}
+<script src="{{ asset_url }}"></script>
+{% endjavascripts %}
+
+{% block javascripts %}{% endblock %}
+</body>
+</html>

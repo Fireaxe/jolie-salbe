@@ -73,7 +73,7 @@ class Room
     /**
      * @var array
      *
-     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Image", mappedBy="room")
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Image", mappedBy="room", cascade={"all"})
      */
     protected $images;
 

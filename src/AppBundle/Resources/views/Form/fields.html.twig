@@ -1,3 +1,48 @@
+{% block form_row %}
+    <div class="form-group">
+        <div class="row">
+            <div class="col-md-12">
+                <label class="col-lg-4 col-md-4 col-sm-4 col-xs-6 control-label">{{ form_label(form) }}</label>
+                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-6">
+                    {{ form_widget(form) }}
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    {{ form_errors(form) }}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock form_row %}
+
+{% block form_label %}
+    {% if label is not same as(false) -%}
+        {% if not compound -%}
+            {% set label_attr = label_attr|merge({'for': id}) %}
+        {%- endif %}
+        {% if required -%}
+            {% set label_attr = label_attr|merge({'class': (label_attr.class|default('') ~ ' required')|trim}) %}
+        {%- endif %}
+        {% if label is empty -%}
+            {% set label = name|humanize %}
+        {%- endif -%}
+        <label{% for attrname, attrvalue in label_attr %}
+        {{ attrname }}="{{ attrvalue }}"
+    {% endfor %}>
+        {{ label|trans({}, translation_domain) }}
+        </label>
+    {%- endif %}
+{% endblock form_label %}
+
+{% block checkbox_widget %}
+    <input type="checkbox" {{ block('widget_attributes') }}
+            {% if value is defined %}
+                value="{{ value }}"
+            {% endif %}
+            {% if checked %}
+                checked="checked"
+            {% endif %} />
+{% endblock checkbox_widget %}
+
 {% block form_errors %}
     {% spaceless %}
         {% if errors|length > 0 %}

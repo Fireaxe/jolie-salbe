@@ -1,36 +1,41 @@
+# To get started with security, check out the documentation:
+# https://symfony.com/doc/current/security.html
 security:
+
+    # https://symfony.com/doc/current/security.html#b-configuring-how-users-are-loaded
+    providers:
+        in_memory:
+            memory:
+                users:
+                    admin:
+                        password: $2y$12$Zcr6RzyrrueKLuSy2Z.k9een4QLKqMZR/mBlyFp0.thfY5ItyxEXq
+                        roles: 'ROLE_ADMIN'
     encoders:
-        UserBundle\Entity\User: sha512
+            Symfony\Component\Security\Core\User\User:
+                algorithm: bcrypt
+                cost: 12
 
     role_hierarchy:
         ROLE_ADMIN:       ROLE_USER
         ROLE_SUPER_ADMIN: [ROLE_USER, ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]
 
-    providers:
-        main:
-            id: fos_user.user_provider.username
-
     firewalls:
+        # disables authentication for assets and the profiler, adapt it according to your needs
         dev:
-            pattern:  ^/{_locale}/(_(profiler|wdt)|css|images|js)/
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
 
-        login:
-            pattern:   ^/{_locale}/(login$|register|resetting)
+        admin:
+            pattern: '^/[a-z]{2}/admin'
             anonymous: ~
+            http_basic: ~
 
         main:
             pattern: ^/
-            anonymous: ~
-            provider:  main
-            form_login:
-                always_use_default_target_path: true
-                default_target_path: admin.index
-                login_path:   admin.login
-                check_path:   fos_user_security_check
-            logout:
-                path:   fos_user_security_logout
-                target: /
+            anonymous: true
 
     access_control:
-        - { path: ^/bo, roles: ROLE_ADMIN }
+        - { path: '^/[a-z]{2}/admin/login$', roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: '^/[a-z]{2}/admin/login_check$', roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: '^/[a-z]{2}/admin/logout$', roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: '^/[a-z]{2}/admin', roles: ROLE_ADMIN }

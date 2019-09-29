@@ -1,0 +1,32 @@
+{% extends 'AppBundle::simple.html.twig' %}
+
+{% block title %}
+    {{ parent() }} - Login
+{% endblock %}
+
+{% block body %}
+    <h1>Login</h1>
+    <hr>
+    <form action="{{ path('login_check') }}" method="post">
+        <div class="form-group">
+            <label class="control-label" for="email">
+                {{ 'user.credentials.identity'|trans }} :
+            </label>
+
+            <input name="email" placeholder="{{ 'user.credentials.identity'|trans }}" class="control-animate" type="text">
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="password">
+                {{ 'user.credentials.password'|trans }} :
+            </label>
+
+            <input name="password" placeholder="{{ 'user.credentials.password'|trans }}" class="control-animate" type="password">
+        </div>
+        <hr>
+        <div class="form-group">
+            <button class="btn btn-animate btn-blue">
+                {{ 'send'|trans }}
+            </button>
+        </div>
+    </form>
+{% endblock %}

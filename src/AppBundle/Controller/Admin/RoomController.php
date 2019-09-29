@@ -2,10 +2,13 @@
 
 namespace AppBundle\Controller\Admin;
 
+use AppBundle\Entity\Image;
 use AppBundle\Entity\Room;
 use AppBundle\Form\RoomType;
+use AppBundle\Service\FileUploader;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\HttpFoundation\Request;
 
 class RoomController extends Controller
@@ -40,7 +43,31 @@ class RoomController extends Controller
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $em->persist($form->getData());
+            $fileUploader = $this->get(FileUploader::class);
+
+            /* @var array $roomFiles */
+            $roomFiles = $form->get('images')->getData();
+
+            /* @var Room $room */
+            $room = $form->getData();
+
+            if ($roomFiles) {
+                $files = [];
+
+                /* @var UploadedFile $file */
+                foreach ($roomFiles as $file) {
+                    $name = $fileUploader->upload($file);
+
+                    $image = new Image();
+                    $image->setName($name);
+                    $image->setRoom($room);
+                    $files[] = $image;
+                }
+
+                $room->setImages($files);
+            }
+
+            $em->persist($room);
             $em->flush();
 
             return $this->redirectToRoute('admin.room.index');
@@ -65,14 +92,39 @@ class RoomController extends Controller
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $em->persist($form->getData());
+            $fileUploader = $this->get(FileUploader::class);
+
+            /* @var array $roomFiles */
+            $roomFiles = $form->get('images')->getData();
+
+            /* @var Room $room */
+            $room = $form->getData();
+
+            if ($roomFiles) {
+                $files = [];
+
+                /* @var UploadedFile $file */
+                foreach ($roomFiles as $file) {
+                    $name = $fileUploader->upload($file);
+
+                    $image = new Image();
+                    $image->setName($name);
+                    $image->setRoom($room);
+                    $files[] = $image;
+                }
+
+                $room->setImages($files);
+            }
+
+            $em->persist($room);
             $em->flush();
 
             return $this->redirectToRoute('admin.room.index');
         }
 
         return $this->render('AppBundle:Back/Room:form.html.twig', [
-            'form' => $form->createView()
+            'form' => $form->createView(),
+            'room' => $room
         ]);
     }
 

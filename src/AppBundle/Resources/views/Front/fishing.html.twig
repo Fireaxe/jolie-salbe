@@ -1,28 +1,30 @@
 {% extends '::base.html.twig' %}
 
 {% block body %}
-    <div class="row">
-        <div class="col-md-offset-1 col-md-5">
-            <h1 class="page-title large">{{ 'page.fishing.page'|trans }}</h1>
+    <div class="fishing">
+        <div class="row">
+            <div class="col-md-offset-1 col-md-5">
+                <h1 class="page-title large">{{ 'page.fishing.page'|trans }}</h1>
+            </div>
         </div>
-    </div>
 
-    <div class="row fishing-block">
-        <div class="col-md-offset-1 col-md-5">
-            <p>
-                {{ 'page.fishing.description.text'|trans|raw }}
-            </p>
-            <p>
-                {{ 'page.fishing.description.text2'|trans|raw }}
-            </p>
+        <div class="row fishing-block">
+            <div class="col-md-offset-1 col-md-5">
+                <p>
+                    {{ 'page.fishing.description.text'|trans|raw }}
+                </p>
+                <p>
+                    {{ 'page.fishing.description.text2'|trans|raw }}
+                </p>
 
-            <h2>{{ 'page.fishing.price.label'|trans }}</h2>
-            <p>
-                {{ 'page.fishing.price.text'|trans|raw }}
-            </p>
-        </div>
-        <div class="col-md-5">
-            <img width="100%" src="{{ asset("assets/images/etang/etang-2.png") }}" alt="etang">
+                <h2>{{ 'page.fishing.price.label'|trans }}</h2>
+                <p>
+                    {{ 'page.fishing.price.text'|trans|raw }}
+                </p>
+            </div>
+            <div class="col-md-5">
+                <img width="100%" src="{{ asset("assets/images/etang/etang-2.png") }}" alt="etang">
+            </div>
         </div>
     </div>
 {% endblock %}

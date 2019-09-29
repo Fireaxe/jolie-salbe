@@ -36,6 +36,13 @@ class Image
     private $updated;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="name", type="string")
+     */
+    protected $name;
+
+    /**
      * @var Room
      *
      * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Room", inversedBy="images")
@@ -89,4 +96,35 @@ class Image
         $this->updated = $now;
     }
 
+    /**
+     * @return Room
+     */
+    public function getRoom()
+    {
+        return $this->room;
+    }
+
+    /**
+     * @param Room $room
+     */
+    public function setRoom($room)
+    {
+        $this->room = $room;
+    }
+
+    /**
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * @param string $name
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+    }
 }

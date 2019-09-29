@@ -1,9 +1,15 @@
 {% extends '::admin.html.twig' %}
 
 {% block body %}
-    {{ form_start(form) }}
-        {{ form_row(form) }}
+    {% include '@App/Form/form_default.html.twig' %}
 
-    <button class="btn btn-primary">Ajouter</button>
-    {{ form_end(form) }}
+    <div class="row room-images">
+        <h2>Images :</h2>
+
+        {% for image in room.images %}
+            <div class="col-md-4">
+                <img width="100%" src="{{ asset('uploads/rooms/' ~ image.name) }}" alt="{{ image.name }}">
+            </div>
+        {% endfor %}
+    </div>
 {% endblock %}
