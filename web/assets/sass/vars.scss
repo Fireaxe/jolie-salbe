@@ -1,7 +1,8 @@
-$primary-color: #fff;
-$bk-color: #E0E6E626;
-$secondary-color: #2286c3;
-$dark-color: #2286c3;
+$theme-color: #F98866;
+$text-color: #5D535E;
+$background-color: #F5F6F6;
+$light-background-color: #fff;
+$dark-background-color: #7F7F80;
 
 @font-face {
   font-family: "Roboto-Light";
@@ -56,6 +57,21 @@ $dark-color: #2286c3;
 @font-face {
   font-family: "Segoe UI Italic";
   src: url("/assets/fonts/Segoe UI Italic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Segoe UI Bold";
+  src: url("/assets/fonts/Segoe UI Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Segoe UI Light";
+  src: url("/assets/fonts/Segoe UI Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Segoe UI Semilight";
+  src: url("/assets/fonts/Segoe UI Semilight.ttf") format("truetype");
 }
 
 /* radius */

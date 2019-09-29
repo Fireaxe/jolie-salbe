@@ -1,0 +1,78 @@
+{% extends '::base.html.twig' %}
+
+{% form_theme form 'AppBundle:Form:fields.html.twig' %}
+
+{% block body %}
+    <div class="contact">
+        <div class="row">
+            <div class="col-md-offset-1 col-md-5">
+                <h1 class="page-title">{{ 'page.contact.page'|trans }}</h1>
+            </div>
+        </div>
+
+        <div class="row contact-block">
+            <div class="col-md-offset-1 col-md-5">
+                <h4>{{ 'page.contact.description.contact'|trans }}</h4>
+
+                <div class="col-md-6 nopadding">
+                    <div class="icon-info">
+                        <div class="image">
+                            <img width="24" height="24" src="{{ asset("assets/images/phone-receiver.svg") }}" alt="phone">
+                        </div>
+                        <ul>
+                            <li>06.50.34.13.43</li>
+                            <li>06.62.66.87.17</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 nopadding">
+                    <div class="icon-info">
+                        <div class="image">
+                            <img width="32" height="32" src="{{ asset("assets/images/email.svg") }}" alt="email">
+                        </div>
+                        <p>
+                            stein.claire24@gmail.com
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-12 nopadding">
+                    <h4 class="form-label">{{ 'page.contact.form.label'|trans }}</h4>
+
+                    {{ form_start(form) }}
+                    {{ form_widget(form.name) }}
+
+                    {{ form_errors(form.email) }}
+                    {{ form_widget(form.email) }}
+
+                    {{ form_widget(form.phone) }}
+                    {{ form_widget(form.subject) }}
+                    {{ form_widget(form.message) }}
+
+                    <button class="btn btn-primary">
+                        {{ 'send'|trans }}
+                    </button>
+                    {{ form_end(form) }}
+                </div>
+            </div>
+            <div class="col-md-6 address">
+                <h4>{{ 'page.contact.description.address'|trans }}</h4>
+
+                <ul>
+                    <li>Lieu dit : Jolysable</li>
+                    <li>14 rue des fontaines</li>
+                    <li>17800 Pons</li>
+                    <li>{{ 'page.contact.description.behind'|trans }}</li>
+                </ul>
+
+                <div id="map"></div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    <script type="text/javascript">
+        loadScript()
+    </script>
+{% endblock %}

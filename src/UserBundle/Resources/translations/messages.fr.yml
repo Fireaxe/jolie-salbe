@@ -17,7 +17,32 @@ page:
       text2: Doté d'une connexion Wi-Fi gratuite dans l'ensemble de ses locaux, le Jolysable propose un hébergement acceptant les animaux domestiques à Pons, à 37 km de Royan. Le parking privé sur place est accessible sans frais.
   rooms:
     title: Chambres
+    list:
+      title: Chambres disponibles
+    night: nuit
+    spec: Spécificités
+    equipment: Equipements
   fishing:
     title: Pêche
+    page: Entrez, installez-vous et pêchez !
+    price:
+      label: Tarifs
+      text: "10€ la journée <br> 20€ les 24h"
+    description:
+      text: "Tous les jours de 8h à 19h.<br> Installez-vous et nous passerons vous voir."
+      text2: "Carpes, esturgeons et tanches en no kill<br> Gardons, gougeons, anguilles, brochets… peuvent être pris."
   contact:
     title: Contact / accès
+    page: Contact et accès
+    description:
+      contact: Contactez-nous pour toute réservation ou informations complémentaires
+      address: Adresse
+      behind: (derrière le Leclerc de Pons)
+    form:
+      label: Formulaire de contact
+      name: Votre nom (obligatoire)
+      email: Votre email (obligatoire)
+      phone: Votre numéro de téléphone (falcultatif)
+      subject: Sujet
+      message: Message
+send: Envoyer

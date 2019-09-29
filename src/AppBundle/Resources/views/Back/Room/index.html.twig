@@ -2,4 +2,41 @@
 
 {% block body %}
     <a class="btn btn-primary" href="{{ path('admin.room.create') }}">Ajouter une chambre</a>
+
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>Titre</th>
+                    <th>Description</th>
+                    <th>Equipement</th>
+                    <th>Prix</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for room in rooms %}
+                    <tr>
+                        <td>
+                            {{ room.title }}
+                        </td>
+                        <td>
+                            {{ room.description }}
+                        </td>
+                        <td>
+                            {{ room.equipment }}
+                        </td>
+                        <td>
+                            {{ room.price }}
+                        </td>
+                        <td>
+                            <a class="btn btn-primary" href="{{ path('admin.room.update', {'room' : room.id}) }}">Modifier</a>
+                            <a class="btn btn-danger" href="{{ path('admin.room.delete', {'room' : room.id}) }}">Supprimer</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
 {% endblock %}

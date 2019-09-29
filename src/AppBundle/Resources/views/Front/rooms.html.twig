@@ -2,196 +2,43 @@
 
 {% block body %}
     <div class="row">
-        <div class="col-md-12">
-            <h1 align="center">Nos chambres</h1>
+        <div class="col-md-offset-1 col-md-10">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="page-title">{{ 'page.rooms.list.title'|trans }} ({{ rooms|length }})</h1>
+                </div>
+            </div>
 
-            <p align="center" class="jolysable-desc">
-                Pour réserver, appelez-nous au <b>06.62.66.87.17</b> ou par mail : <b>stein.claire24@gmail.com</b><br />
-                Chambre de 60 à 90€ petit déjeuner compris !<br />
+            {% for room in rooms if room.open %}
+                <div class="row room-block">
+                    <div class="col-md-4 nopadding">
 
-                <i>Animaux admis (5€ par animal / nuit)</i>
-            </p>
-        </div>
-    </div>
+                    </div>
+                    <div class="col-md-6 nopadding">
+                        <div class="room-summary">
+                            <h3>{{ room.title }}</h3>
 
-    <div class="row">
-        <div class="col-md-12">
-            <h3>Chambres avec salle de bain privative</h3>
-            <hr class="height-sup">
-        </div>
-    </div>
+                            <div class="col-md-6 nopadding">
+                                <h4>{{ 'page.rooms.spec'|trans }}</h4>
 
-    <div class="row">
-        <div class="col-md-12 room-thumbnail">
-            <div class="col-md-6">
-                <div class="thumb thumbnail">
-                    <figure>
-                        <img src="{{ asset("assets/images/chambre-haut.jpg") }}"
-                             class="lazy" title="section gîte">
-                        <figcaption class="text-center">
-                            <h3>
-                                <span>Chambre Double sous les toits</span>
-                            </h3>
-                        </figcaption>
-                        <div class="caption">
-                            <a href="#">
-                                <h3 align="center">Chambre à 75€</h3>
-                            </a>
+                                <div class="room-description">
+                                    {{ room.description|raw|nl2br }}
+                                </div>
+                            </div>
+                            <div class="col-md-6 nopadding">
+                                <h4>{{ 'page.rooms.equipment'|trans }}</h4>
+
+                                <div class="room-equipment">
+                                    {{ room.equipment|raw|nl2br }}
+                                </div>
+                            </div>
                         </div>
-                    </figure>
+                    </div>
+                    <div class="col-md-2 nopadding">
+                        <h3 class="room-price">{{ room.price }}€/{{ 'page.rooms.night'|trans }}</h3>
+                    </div>
                 </div>
-            </div>
-
-            <div class="col-md-6">
-                <div class="room-desc arrow-left black">
-                    <p>
-                        Superficie 16 m²<br><br>
-                        Chambre à l'étage, accessible uniquement par un escalier. <br><br>
-                        2 lits de 90x200cm.
-                    </p>
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
-
-    <div class="row">
-        <div class="col-md-12 room-thumbnail bottom">
-            <div class="col-md-6">
-                <div class="room-desc arrow-right black">
-                    <p>
-                        Superficie 25 m²<br><br>
-                        Lit de 160x200cm.
-                    </p>
-                </div>
-            </div>
-
-            <div class="col-md-6">
-                <div class="thumb thumbnail">
-                    <figure>
-                        <img src="{{ asset("assets/images/chambre-bas-75.jpg") }}"
-                             class="lazy" title="section gîte">
-                        <figcaption class="text-center">
-                            <h3>
-                                <span>Chambre Double avec vue sur jardin</span>
-                            </h3>
-                        </figcaption>
-                        <div class="caption">
-                            <a href="#">
-                                <h3 align="center">Chambre à 75€</h3>
-                            </a>
-                        </div>
-                    </figure>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-md-12 room-thumbnail bottom">
-            <div class="col-md-6">
-                <div class="thumb thumbnail">
-                    <figure>
-                        <img src="{{ asset("assets/images/100-1.jpg") }}"
-                             class="lazy" title="section gîte">
-                        <figcaption class="text-center">
-                            <h3>
-                                <span>Chambre Double vue sur lac</span>
-                            </h3>
-                        </figcaption>
-                        <div class="caption">
-                            <a href="#">
-                                <h3 align="center">Chambre à 90€</h3>
-                            </a>
-                        </div>
-                    </figure>
-                </div>
-            </div>
-
-            <div class="col-md-6">
-                <div class="room-desc arrow-left black">
-                    <p>
-                        Superficie 40 m²<br><br>
-                        Cette chambre double dispose d'un coin repas. <br><br>
-                        Lit 160x200cm.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-md-12">
-            <h3 class="margin-top">Chambres avec salle de bain commune</h3>
-            <hr class="height-sup">
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-md-12 room-thumbnail">
-            <div class="col-md-6">
-                <div class="thumb thumbnail">
-                    <figure>
-                        <img src="{{ asset("assets/images/50-1.jpg") }}"
-                             class="lazy" title="section gîte">
-                        <figcaption class="text-center">
-                            <h3>
-                                <span>Chambre Double</span>
-                            </h3>
-                        </figcaption>
-                        <div class="caption">
-                            <a href="#">
-                                <h3 align="center">Chambre à 60€</h3>
-                            </a>
-                        </div>
-                    </figure>
-                </div>
-            </div>
-
-            <div class="col-md-6">
-                <div class="room-desc arrow-left black">
-                    <p>
-                        Superficie 15 m²<br><br>
-
-                        Lit 140x200cm.<br><br>
-
-                        Veuillez noter qu'aucun lit d'appoint ne peut être installé dans cette chambre double.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-md-12 room-thumbnail bottom">
-            <div class="col-md-6">
-                <div class="room-desc arrow-right black">
-                    <p>
-                        Superficie 18 m²<br><br>
-
-                        2 lits de 90x200cm. <br><br>
-                    </p>
-                </div>
-            </div>
-
-            <div class="col-md-6">
-                <div class="thumb thumbnail">
-                    <figure>
-                        <img src="{{ asset("assets/images/55-1.jpg") }}"
-                             class="lazy" title="section gîte">
-                        <figcaption class="text-center">
-                            <h3>
-                                <span>Chambre Double ou lits jumeaux</span>
-                            </h3>
-                        </figcaption>
-                        <div class="caption">
-                            <a href="#">
-                                <h3 align="center">Chambre à 65€</h3>
-                            </a>
-                        </div>
-                    </figure>
-                </div>
-            </div>
-        </div>
-    </div>
-
 {% endblock %}
