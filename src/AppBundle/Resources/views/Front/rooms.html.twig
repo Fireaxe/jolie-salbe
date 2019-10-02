@@ -14,7 +14,7 @@
                     <div class="row room-block">
                         <div class="col-md-4 nopadding">
                             {% if room.images|length > 0 %}
-                                <img width="90%" src="{{ asset('uploads/rooms/' ~ room.images[0].name) }}"
+                                <img width="90%" src="{{ asset('uploads/rooms/' ~ (room.images|last).name) }}"
                                      alt="{{ room.images[0].name }}">
                             {% endif %}
                         </div>

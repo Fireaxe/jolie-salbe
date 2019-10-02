@@ -13,12 +13,12 @@ page:
   homepage:
     title: Présentation
     banner:
-      title: Chambre d'hote Jolysable
+      title: Chambres d'hotes Jolysable
       location: Pons, Charente-Maritime
     description:
-      label: Auberge de charme idéalement située entre Royan, Cognac et Bordeaux
-      text: Idéalement située entre Royan, Cognac et Bordeaux, nos chambres vous apporteront le calme d'un coin de nature au bord d'un étang de pêche. Nous disposons de 5 chambres allant de 60 à 90€, toutes avec télé, wifi et plateau de complaisance. Doté d'une connexion Wi-Fi gratuite dans l'ensemble de ses locaux, le Jolysable propose un hébergement acceptant les animaux domestiques à Pons, à 37 km de Royan. Le parking privé sur place est accessible sans frais.
-      text2: Doté d'une connexion Wi-Fi gratuite dans l'ensemble de ses locaux, le Jolysable propose un hébergement acceptant les animaux domestiques à Pons, à 37 km de Royan. Le parking privé sur place est accessible sans frais.
+      label: "Etablissement situé entre Royan, Cognac et Bordeaux"
+      text: "Situées à 4 minutes de la sortie d’autoroute et 2 minutes du centre ville nos 5 chambres d'hôtes vous accueilleront dans le calme d'un écrin de verdure. Vous pourrez profiter d'un moment de repos au bord de l'étang.<br>Prix compris entre 60€ et 90€ petit déjeuner compris nos chambres ont toutes le wifi, un écran plat et un plateau de complaisance."
+      text2: "Nous acceptons les animaux domestiques 5€ par animal (offert à partir de 2 nuits).<br>Nous bénéficions d'un grand parking privé gratuit."
   rooms:
     title: Chambres
     list:
