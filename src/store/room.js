@@ -76,9 +76,9 @@ export default {
           let image = null;
           el.attributes.image_style_uri.forEach(el => {
             if (el["large"] !== undefined) {
-              image = el["large"]
+              image = el["large"];
             }
-          })
+          });
           return image;
         })
       });
@@ -92,9 +92,9 @@ export default {
     [FETCHING_ROOMS]: async ({ commit }) => {
       commit(FETCHING_ROOMS);
       try {
-      let response = await RoomAPI.findAll();
-      commit(FETCHING_ROOMS_SUCCESS, response.data);
-      return response.data;
+        let response = await RoomAPI.findAll();
+        commit(FETCHING_ROOMS_SUCCESS, response.data);
+        return response.data;
       } catch (error) {
         commit(FETCHING_ROOMS_ERROR, error);
         return null;

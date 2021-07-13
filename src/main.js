@@ -8,17 +8,17 @@ import messages from "./assets/lang";
 import axios from "axios";
 import VueAxios from "vue-axios";
 import store from "./store";
-import NProgress from 'vue-nprogress';
+import NProgress from "vue-nprogress";
 
-import '../node_modules/nprogress/nprogress.css'
+import "../node_modules/nprogress/nprogress.css";
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
 
 const options = {
-  latencyThreshold: 200,
+  latencyThreshold: 200
 };
 
-Vue.use(NProgress, options)
+Vue.use(NProgress, options);
 Vue.use(VueAxios, axios);
 Vue.use(BootstrapVue);
 Vue.use(IconsPlugin);

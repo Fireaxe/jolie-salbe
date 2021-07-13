@@ -6,6 +6,7 @@ import progressBar from "../utils/nprogress";
 Vue.use(VueRouter);
 
 const Home = () => import("../views/Home");
+const Legal = () => import("../views/Legal");
 
 const router = new VueRouter({
   mode: "history",
@@ -15,6 +16,11 @@ const router = new VueRouter({
       name: "Home",
       path: "/",
       component: Home
+    },
+    {
+      name: "Legal",
+      path: "/legals",
+      component: Legal
     },
     {
       path: "*",
@@ -43,13 +49,13 @@ router.beforeEach(function(to, from, next) {
 
 router.beforeResolve((to, from, next) => {
   if (to.name) {
-    progressBar.start()
+    progressBar.start();
   }
-  next()
+  next();
 });
 
 router.afterEach(() => {
-  progressBar.stop()
+  progressBar.stop();
 });
 
 export default router;

@@ -45,9 +45,9 @@ export default {
           let image = null;
           el.attributes.image_style_uri.forEach(el => {
             if (el["homepage"] !== undefined) {
-              image = el["homepage"]
+              image = el["homepage"];
             }
-          })
+          });
           return image;
         })
       });
@@ -61,9 +61,9 @@ export default {
     homepage: async ({ commit }) => {
       commit(FETCHING_CAROUSEL);
       // try {
-        let response = await CarouselAPI.findHomepage();
-        commit(FETCHING_CAROUSEL_SUCCESS, response.data);
-        return response.data;
+      let response = await CarouselAPI.findHomepage();
+      commit(FETCHING_CAROUSEL_SUCCESS, response.data);
+      return response.data;
       // } catch (error) {
       //   commit(FETCHING_CAROUSEL_ERROR, error);
       //   return null;
