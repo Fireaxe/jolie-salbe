@@ -14,9 +14,6 @@
         <router-link to="#rooms" class="nav-item nav-link">
           {{ $t("page.rooms.title") }}
         </router-link>
-        <router-link to="#fishing" class="nav-item nav-link">
-          {{ $t("page.fishing.title") }}
-        </router-link>
         <router-link to="#contact" class="nav-item nav-link">
           {{ $t("page.contact.title") }}
         </router-link>
