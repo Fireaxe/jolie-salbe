@@ -36,17 +36,12 @@ page:
       kitchen: Coin cuisine
       wifi: Wifi
   fishing:
-    title: Pêche
-    page: Entrez, installez-vous et pêchez !
-    price:
-      label: Tarifs
-      text: "10€ la journée"
-      text2: "20€ les 24h"
+    title: Etang
+    page: ACTIVITES
     description:
-      text: "Tous les jours de 8h à 19h."
-      text2: "Installez-vous et nous passerons vous voir."
-      text3: "Carpes, esturgeons et tanches en no kill"
-      text4: "Gardons, gougeons, anguilles, brochets… peuvent être pris."
+      text: "Pêche l'étang"
+      text2: "Promenade parmis les animaux"
+      text3: "Terrain de pétanque"
   contact:
     title: Contact / accès
     page: Contact et accès
