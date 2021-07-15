@@ -9,7 +9,7 @@
     </div>
 
     <div class="room-block">
-      <div v-if="isLoading" class="row offset-lg-1 col-lg-3 p-0">
+      <div v-if="isLoading && !hasRooms" class="row offset-lg-1 col-lg-3 p-0">
         <p>Loading...</p>
       </div>
       <div v-else-if="!hasRooms" class="row offset-lg-1 col-lg-3 p-0">
@@ -85,7 +85,9 @@ export default {
     }
   },
   created() {
-    this.$store.dispatch("room/FETCHING_ROOMS");
+    if (!this.hasRooms) {
+      this.$store.dispatch("room/FETCHING_ROOMS");
+    }
   }
 };
 </script>
